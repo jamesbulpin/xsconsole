@@ -46,12 +46,7 @@
     <Source>plugins-base/XSFeatureSaveBugReport.py</Source>
     <Source>plugins-base/XSFeatureSuspendSR.py</Source>
     <Source>plugins-base/XSFeatureNTP.py</Source>
-    <Source>plugins-oem/XSFeatureManagementHelp.py</Source>
-    <Source>plugins-oem/XSFeatureVerboseBoot.py</Source>
-    <Source>plugins-oem/XSFeatureReset.py</Source>
     <Source>plugins-base/XSFeatureInstallLicence.py</Source>
-    <Source>plugins-oem/XSFeatureOEMRestore.py</Source>
-    <Source>plugins-oem/XSFeatureOEMBackup.py</Source>
     <Source>plugins-base/XSFeatureChangeTimeout.py</Source>
     <Source>plugins-base/XSMenuLayout.py</Source>
     <Source>plugins-base/XSFeatureLocalShell.py</Source>
@@ -61,7 +56,6 @@
     <Source>plugins-base/XSFeatureReboot.py</Source>
     <Source>plugins-base/XSFeatureShutdown.py</Source>
     <Source>plugins-base/XSFeatureStatus.py</Source>
-    <Source>plugins-oem/XSFeatureOEMRevert.py</Source>
     <Source>plugins-base/XSFeatureLogInOut.py</Source>
     <Source>XSConsoleHotData.py</Source>
     <Source>plugins-base/XSFeatureVMInfo.py</Source>
@@ -74,9 +68,6 @@
     <Source>plugins-base/XSFeatureSRCommon.py</Source>
     <Source>XSConsoleLangFriendlyNames.py</Source>
     <Source>plugins-base/XSFeatureSRCreate.py</Source>
-    <Source>plugins-oem/XSFeatureClaimSR.py</Source>
-    <Source>plugins-oem/XSFeatureUpdate.py</Source>
-    <Source>plugins-oem/XSMenuOEMLayout.py</Source>
     <Source>plugins-base/XSFeatureDRRestore.py</Source>
     <Source>plugins-base/XSFeatureDRBackup.py</Source>
     <Source>plugins-base/XSFeaturePoolJoin.py</Source>
