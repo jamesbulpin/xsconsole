@@ -15,7 +15,7 @@
 
 import XenAPI
 
-import commands, re, shutil, sys, tempfile, socket
+import commands, re, shutil, sys, tempfile, socket, os
 from pprint import pprint
 from simpleconfig import SimpleConfigFile
 
@@ -1051,10 +1051,23 @@ class Data:
     
     def IsXAPIRunning(self):
         try:
-            if ShellPipe('/sbin/pidof', '-s',  '/opt/xensource/bin/xapi').CallRC() == 0:
-                retVal = True
+            if os.path.exists("/run/xapi.pid"):
+                # Look for any "xapi" running
+                pid = file("/run/xapi.pid").read().strip()
+                exelink = "/proc/%s/exe" % (pid)
+                if os.path.exists(exelink):
+                    if os.path.basename(os.readlink(exelink)) == "xapi":
+                        retVal = True
+                    else:
+                        retVal = False
+                else:
+                    retVal = False
             else:
-                retVal = False
+                # Look for XenServer/XCP appliance xapi
+                if ShellPipe('/sbin/pidof', '-s',  '/opt/xensource/bin/xapi').CallRC() == 0:
+                    retVal = True
+                else:
+                    retVal = False
         except:
             retVal = False
         return retVal
