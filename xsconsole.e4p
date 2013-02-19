@@ -46,7 +46,6 @@
     <Source>plugins-base/XSFeatureSaveBugReport.py</Source>
     <Source>plugins-base/XSFeatureSuspendSR.py</Source>
     <Source>plugins-base/XSFeatureNTP.py</Source>
-    <Source>plugins-base/XSFeatureInstallLicence.py</Source>
     <Source>plugins-base/XSFeatureChangeTimeout.py</Source>
     <Source>plugins-base/XSMenuLayout.py</Source>
     <Source>plugins-base/XSFeatureLocalShell.py</Source>
