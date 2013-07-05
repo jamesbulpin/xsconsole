@@ -1044,9 +1044,14 @@ class Data:
     
     def IsXAPIRunning(self):
         try:
+            pidfile = None
             if os.path.exists("/run/xapi.pid"):
+                pidfile = "/run/xapi.pid"
+            elif os.path.exists("/var/run/xapi.pid"):
+                pidfile = "/var/run/xapi.pid"
+            if pidfile:
                 # Look for any "xapi" running
-                pid = file("/run/xapi.pid").read().strip()
+                pid = file(pidfile).read().strip()
                 exelink = "/proc/%s/exe" % (pid)
                 if os.path.exists(exelink):
                     if os.path.basename(os.readlink(exelink)) == "xapi":
